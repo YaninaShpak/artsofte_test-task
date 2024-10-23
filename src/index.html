@@ -1,83 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TD Тех.задание для верстальщика</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/main.js"></script>
-</head>
-<body>
-    <div class="container">
-      <div class="card">
-        <div class="card__img">
-          <img src="images/product_image.png" alt="Автомобиль Volvo XC40" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TD Тех.задание для верстальщика</title>
+        <link rel="stylesheet" href="styles/main.css" />
+        <script src="scripts/main.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="card__img">
+                    <img
+                        src="images/product_image.png"
+                        alt="Автомобиль Volvo XC40"
+                    />
+                </div>
+                <div class="card__info">
+                    <div class="card__header-info">
+                        <h3 class="card__title">Volvo XC40</h3>
+                        <span class="card__year">2024</span>
+                        <p class="card__discount">Скидка 200 000 ₽</p>
+                    </div>
+                    <div class="card__specs-info">
+                        <ul class="specs">
+                            <li class="specs__item">
+                                <span class="specs__title">Бензин, 180 л.с.</span>
+                                <span class="specs__desc">2.0 л</span>
+                            </li>
+                            <li class="specs__item">
+                                <span class="specs__title">Передний</span>
+                                <span class="specs__desc">4х2</span>
+                            </li>
+                            <li class="specs__item">
+                                <span class="specs__title">6 ступений</span>
+                                <span class="specs__desc">АКПП</span>
+                            </li>
+                            <li class="specs__item">
+                                <span class="specs__title">Стоимость</span>
+                                <span class="specs__desc specs__desc--price">5 131 000 ₽</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal">
+                <div class="modal__wrapper">
+                    <button
+                        class="close-button modal__close-button"
+                        type="button"
+                        aria-label="Закрыть"
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M19 1L1 19M1 1L19 19"
+                                stroke="#E1E0E0"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </button>
+                    <div class="modal__img">
+                        <img src="images/logo.svg" alt="логотип" />
+                    </div>
+                    <div class="modal__info">
+                        <h2 class="modal__title">Ваша заявка отправлена!</h2>
+                        <p class="modal__text">
+                            Спасибо за обращение! Мы свяжемся с вами в ближайшее
+                            время
+                        </p>
+                    </div>
+                    <button
+                        class="back-button modal__back-button"
+                        type="button"
+                    >
+                        Вернуться в каталог
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="card__info">
-          <div class="card__header-info">
-            <h3 class="card__title">Volvo XC40</h3>
-            <span class="card__year">2024</span>
-            <p class="card__discount">Скидка 200 000 ₽</p>
-          </div>
-          <div class="card__specs-info">
-            <ul class="specs">
-              <li class="specs__item">
-                <span class="specs__title">Бензин, 180 л.с.</span>
-                <span class="specs__desc">2.0 л</span>
-              </li>
-              <li class="specs__item">
-                <span class="specs__title">Передний</span>
-                <span class="specs__desc">4х2</span>
-              </li>
-              <li class="specs__item">
-                <span class="specs__title">6 ступений</span>
-                <span class="specs__desc">АКПП</span>
-              </li>
-              <li class="specs__item">
-                <span class="specs__title">Стоимость</span>
-                <span class="specs__desc specs__desc--price">5 131 000 ₽</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="modal">
-        <div class="modal__wrapper">
-          <button
-            class="close-button modal__close-button"
-            type="button"
-            aria-label="Закрыть"
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M19 1L1 19M1 1L19 19"
-                stroke="#E1E0E0"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-          <div class="modal__img">
-            <img src="images/logo.svg" alt="логотип" />
-          </div>
-          <div class="modal__info">
-            <h2 class="modal__title">Ваша заявка отправлена!</h2>
-            <p class="modal__text">
-              Спасибо за обращение! Мы свяжемся с вами в ближайшее время
-            </p>
-          </div>
-          <button class="back-button modal__back-button" type="button">
-            Вернуться в каталог
-          </button>
-        </div>
-      </div>
-    </div>
-</body>
+    </body>
 </html>

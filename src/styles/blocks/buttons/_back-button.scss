@@ -1,26 +1,26 @@
 @use "../../global/variables";
 
 .back-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  padding: 20px 32.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 32.5px;
 
-  font-family: Montserrat, sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 125%;
-  text-align: center;
-  color: variables.$background-secondary;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    text-align: center;
+    color: variables.$background-secondary;
 
-  background: variables.$accent-primary;
-  border: none;
-  cursor: pointer;
+    background: variables.$accent-primary;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 @media (min-width: 320px) and (max-width: 475px) {
-  .back-button {
-    align-self: stretch;
-  }
+    .back-button {
+        align-self: stretch;
+    }
 }

@@ -4,28 +4,31 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Montserrat, sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-weight: 400;
-  background-color: variables.$background-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+
+    background-color: variables.$background-primary;
 }
 
 .container {
-  padding: 0 40px;
+    padding: 0 40px;
 }
 
 @media (min-width: 320px) and (max-width: 475px) {
-  .container {
-    padding: 0 functions.prc(20, 360);
-  }
+    .container {
+        padding: 0 functions.prc(20, 360);
+    }
 }
