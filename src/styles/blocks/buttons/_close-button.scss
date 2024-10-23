@@ -1,0 +1,15 @@
+.close-button {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 475px) {
+  .close-button {
+    width: 24px;
+    height: 24px;
+  }
+}
