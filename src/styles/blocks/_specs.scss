@@ -1,0 +1,52 @@
+@use "../global/variables";
+@use "../global/functions";
+
+.specs {
+  display: flex;
+  list-style: none;
+  color: variables.$text-secondary;
+  column-gap: 40px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 8px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: variables.$font-size-sm;
+    line-height: 100%;
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: variables.$h3-font-size;
+    line-height: 120%;
+
+    &--price {
+      font-weight: 600;
+      color: variables.$text-primary;
+      cursor: default;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 475px) {
+  .specs {
+    column-gap: functions.adaptivValue(50, 15, 470);
+
+    &__item {
+      row-gap: 2px;
+    }
+
+    &__title {
+      font-size: 8px;
+    }
+
+    &__desc {
+      font-size: functions.vw(12, 360);
+    }
+  }
+}
