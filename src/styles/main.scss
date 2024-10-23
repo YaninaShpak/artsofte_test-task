@@ -44,6 +44,100 @@ body {
     background-color: variables.$background-primary;
 }
 
-h1 {
-    font-size: variables.$h1-font-size;
+//---card
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: variables.$background-secondary;
+
+  &__img {
+    display: flex;
+    width: 165px;
+    background-color: #e4eaf0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    padding: 12px 12px 12px 16px;
+  }
+
+  &__header-info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title,
+  &__year {
+    font-size: variables.$h3-font-size;
+    line-height: 120%;
+  }
+
+  &__title {
+    margin-right: 6px;
+    font-weight: 600;
+    color: variables.$text-primary;
+  }
+
+  &__year {
+    font-weight: 500;
+    color: variables.$text-secondary;
+  }
+
+  &__discount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // gap: 10px;
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin-left: auto;
+    font-weight: 400;
+    font-size: variables.$font-size-sm;
+    line-height: 133%;
+    color: variables.$accent-done;
+
+    background: variables.$background-done;
+  }
+}
+
+.specs {
+  display: flex;
+  list-style: none;
+  color: variables.$text-secondary;
+  column-gap: 40px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 8px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: variables.$font-size-sm;
+    line-height: 100%;
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: variables.$h3-font-size;
+    line-height: 120%;
+
+    &--price {
+      font-weight: 600;
+      color: variables.$text-primary;
+    }
+  }
 }
