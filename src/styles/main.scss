@@ -1,4 +1,5 @@
 @use "variables";
+@use "sass:math";
 
 @font-face {
   font-family: "Montserrat";
@@ -25,6 +26,36 @@
   font-style: normal;
 }
 
+// $pxOne - наши пиксели, которые нужно перевести в проценты
+// $pxTwo - ширина родителя
+@function prc($pxOne, $pxTwo) {
+  $result: math.div($pxOne, $pxTwo) * 100%;
+  @return $result;
+}
+
+@function vw($pxOne, $pxTwo) {
+  $result: math.div($pxOne, $pxTwo) * 100vw;
+  @return $result;
+}
+
+@function rem($px) {
+  $result: math.div($px, 18) + rem;
+  @return $result;
+}
+
+// EM
+@function em($px) {
+  $result: math.div($px, 18) + em;
+  @return $result;
+}
+
+@function adaptivValue($startSize, $minSize, $containerSize) {
+  @return calc(
+    #{$minSize + px} + ($startSize - $minSize) * ((100vw - 320px) /
+          ($containerSize - 320))
+  );
+}
+
 *,
 *::before,
 *::after {
@@ -42,6 +73,10 @@ body {
   height: 100vh;
   font-weight: 400;
   background-color: variables.$background-primary;
+}
+
+.container {
+  padding: 0 40px;
 }
 
 //---card
@@ -115,7 +150,7 @@ body {
   @media (hover: hover) {
     &:hover {
       box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
-  
+
       .card__title {
         color: variables.$accent-primary;
       }
@@ -254,4 +289,84 @@ body {
   background: variables.$accent-primary;
   border: none;
   cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 475px) {
+  .container {
+    padding: 0 prc(20, 360);
+  }
+
+  .card {
+    flex-direction: column;
+
+    &__img {
+      width: 100%;
+    }
+
+    &__info {
+      padding: 12px;
+      row-gap: 12px;
+    }
+
+    &__title,
+    &__year {
+      font-size: vw(12, 360);
+    }
+
+    &__discount {
+      border-radius: 4px;
+      padding: 2px 4px;
+      font-size: 10px;
+    }
+  }
+
+  .specs {
+    column-gap: adaptivValue(50, 15, 470);
+
+    &__item {
+      row-gap: 2px;
+    }
+
+    &__title {
+      font-size: 8px;
+    }
+
+    &__desc {
+      font-size: vw(12, 360);
+    }
+  }
+
+  .modal {
+    &__wrapper {
+      margin: 0 20px;
+      padding: 16px;
+    }
+
+    &__close-button {
+      top: 16px;
+      right: 16px;
+    }
+
+    &__img {
+      width: 130px;
+    }
+
+    &__info {
+      row-gap: 16px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  .close-button {
+    width: 24px;
+    height: 24px;
+  }
+
+  .back-button {
+    align-self: stretch;
+  }
 }
