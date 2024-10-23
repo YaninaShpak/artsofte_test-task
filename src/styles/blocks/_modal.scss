@@ -1,0 +1,100 @@
+@use "../global/variables";
+@use "../global/functions";
+
+.modal {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    row-gap: 40px;
+
+    padding: 40px;
+
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+    background: variables.$background-secondary;
+    border-radius: 12px;
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+  }
+
+  &__img {
+    width: 170px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 133%;
+    text-align: center;
+    color: variables.$text-primary;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 133%;
+    text-align: center;
+    color: variables.$text-secondary;
+  }
+}
+
+.show.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 320px) and (max-width: 475px) {
+  .modal {
+    &__wrapper {
+      margin: 0 20px;
+      padding: 16px;
+    }
+
+    &__close-button {
+      top: 16px;
+      right: 16px;
+    }
+
+    &__img {
+      width: 130px;
+    }
+
+    &__info {
+      row-gap: 16px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}
