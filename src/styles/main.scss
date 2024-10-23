@@ -28,20 +28,20 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Montserrat, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-weight: 400;
-    background-color: variables.$background-primary;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-weight: 400;
+  background-color: variables.$background-primary;
 }
 
 //---card
@@ -53,6 +53,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
   background-color: variables.$background-secondary;
+  cursor: pointer;
 
   &__img {
     display: flex;
@@ -87,6 +88,7 @@ body {
     margin-right: 6px;
     font-weight: 600;
     color: variables.$text-primary;
+    cursor: default;
   }
 
   &__year {
@@ -108,6 +110,14 @@ body {
     color: variables.$accent-done;
 
     background: variables.$background-done;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+
+    .card__title {
+      color: variables.$accent-primary;
+    }
   }
 }
 
@@ -138,6 +148,7 @@ body {
     &--price {
       font-weight: 600;
       color: variables.$text-primary;
+      cursor: default;
     }
   }
 }
