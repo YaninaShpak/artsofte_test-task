@@ -224,3 +224,21 @@ body {
 
   cursor: pointer;
 }
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 20px 32.5px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+  color: variables.$background-secondary;
+
+  background: variables.$accent-primary;
+  border: none;
+  cursor: pointer;
+}
